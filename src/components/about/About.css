@@ -1,0 +1,37 @@
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical */
+  align-items: center;     /* horizontal */
+  height: 90vh;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-name {
+  font-size: 72px;
+  font-weight: bold;
+}
+
+.about-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.about-links a {
+  color: inherit;       /* Uses the parent text color */
+  text-decoration: none; /* Removes underline */
+  transition: color 0.3s; /* Optional: smooth hover effect */
+}
+
+.about-links a:hover {
+  color: #007bff; /* Optional: change color on hover */
+}
+
+.about-details {
+  padding-left: 10%;   /* horizontal padding */
+  padding-right: 10%;
+  font-size: 24px;      /* font size for the text content */
+  font-weight: 200;
+}

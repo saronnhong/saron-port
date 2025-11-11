@@ -1,0 +1,83 @@
+.projects-section {
+  padding: 50px 20px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.projects-section h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.project-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 30px;
+}
+
+.project-item.reverse {
+  flex-direction: row-reverse; /* alternate layout for variety */
+}
+
+.project-image img {
+  width: 700px;        /* adjust size */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-info h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.project-info p {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 200;
+}
+
+.project-tech {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center; /* vertically center all icons */
+}
+
+.tech-icon,
+.tech-icon-svg {
+  width: 36px;      /* match Font Awesome icon size */
+  height: 36px;
+  margin: 0 4px;
+  object-fit: contain; /* ensures SVG scales correctly */
+  transition: transform 0.3s, filter 0.3s;
+}
+
+/* .tech-icon:hover,
+.tech-icon-svg:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+} */
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-item {
+    flex-direction: column;
+  }
+
+  .project-item.reverse {
+    flex-direction: column;
+  }
+
+  .project-image img {
+    width: 100%;
+    max-width: 400px;
+  }
+}

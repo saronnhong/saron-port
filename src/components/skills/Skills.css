@@ -1,0 +1,74 @@
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  text-align: center;
+  margin-top: 200px;
+}
+
+.skills-title {
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: 200;
+  
+}
+
+/* .skills-icons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 90%;
+} */
+ .skills-icons {
+  display: flex;
+  justify-content: center; /* center items instead of spreading */
+  flex-wrap: wrap;
+  gap: 20px; /* smaller space between icons */
+  max-width: 90%;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.skill-item svg {
+  font-size: 3rem;
+  /* color: #333; */
+  color: black;
+  transition: transform 0.3s;
+}
+
+.skill-item:hover svg {
+  transform: scale(1.2);
+}
+
+.skill-name {
+  margin-top: 8px;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none; /* prevents hover flicker */
+}
+
+.skill-item:hover .skill-name {
+  opacity: 1;
+}
+
+.skill-svg {
+  width: 44px;          /* match Font Awesome size */
+  height: 44px;         /* match Font Awesome size */
+  object-fit: contain;   /* maintain aspect ratio */
+  color: black; 
+  transition: transform 0.3s;
+}
+
+.skill-item:hover .skill-svg {
+  transform: scale(1.2); /* same hover effect as Font Awesome */
+  color: black;  
+}
