@@ -1,10 +1,4 @@
 .contact-section {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 20px;
-  text-align: center; */
   padding-left: 10%;   /* horizontal padding */
   padding-right: 10%;
   font-size: 24px;
@@ -14,7 +8,7 @@
 }
 
 .contact-section h2 {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .contact-section p {
@@ -32,4 +26,25 @@
 .contact-email:hover {
   color: #007bff;
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding-left: 5%;  
+    padding-right: 5%;
+    font-size: 16px;
+    font-weight: 200;
+    margin-top: 0px;
+  }
+  .contact-section h2 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .contact-section p {
+    font-size: 16px;
+  }
+
+  .contact-email {
+    font-size: 16px;
+  }
 }

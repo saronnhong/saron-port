@@ -60,12 +60,6 @@
   transition: transform 0.3s, filter 0.3s;
 }
 
-/* .tech-icon:hover,
-.tech-icon-svg:hover {
-  transform: scale(1.2);
-  filter: brightness(1.2);
-} */
-
 /* Responsive */
 @media (max-width: 768px) {
   .project-item {
@@ -80,4 +74,33 @@
     width: 100%;
     max-width: 400px;
   }
+  .projects-section {
+    padding: 0px;
+    max-width: 90%;
+    margin: 0 auto;
+    }
+
+  .projects-section h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+
+  .project-info h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .project-info p {
+    font-size: 16px;
+    }
+
+    .tech-icon,
+    .tech-icon-svg {
+        width: 18px;      /* match Font Awesome icon size */
+        height: 18px;
+        margin: 0 4px;
+        object-fit: contain; /* ensures SVG scales correctly */
+        transition: transform 0.3s, filter 0.3s;
+    }
 }

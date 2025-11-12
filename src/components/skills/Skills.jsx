@@ -1,13 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faJs,
-    faReact,
-    faNodeJs,
-    faAngular,
-    faPython,
-    faGit,
-    faAws
-} from '@fortawesome/free-brands-svg-icons';
+import { faJs, faReact, faNodeJs, faAngular, faPython, faGit, faAws } from '@fortawesome/free-brands-svg-icons';
 import TypeScriptLogo from '../../assets/logos/typescript.svg';
 import SqliteLogo from '../../assets/logos/sqlite.svg';
 import MySQLLogo from '../../assets/logos/mysql.svg';

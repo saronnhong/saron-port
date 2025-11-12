@@ -11,21 +11,13 @@
   font-size: 24px;
   margin-bottom: 30px;
   font-weight: 200;
-  
 }
 
-/* .skills-icons {
+.skills-icons {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center; 
   flex-wrap: wrap;
-  gap: 40px;
-  max-width: 90%;
-} */
- .skills-icons {
-  display: flex;
-  justify-content: center; /* center items instead of spreading */
-  flex-wrap: wrap;
-  gap: 20px; /* smaller space between icons */
+  gap: 20px; 
   max-width: 90%;
 }
 
@@ -38,8 +30,7 @@
 }
 
 .skill-item svg {
-  font-size: 3rem;
-  /* color: #333; */
+  font-size: 48px;
   color: black;
   transition: transform 0.3s;
 }
@@ -50,10 +41,10 @@
 
 .skill-name {
   margin-top: 8px;
-  font-size: 1rem;
+  font-size: 16px;
   opacity: 0;
   transition: opacity 0.3s;
-  pointer-events: none; /* prevents hover flicker */
+  pointer-events: none; 
 }
 
 .skill-item:hover .skill-name {
@@ -61,14 +52,37 @@
 }
 
 .skill-svg {
-  width: 44px;          /* match Font Awesome size */
-  height: 44px;         /* match Font Awesome size */
-  object-fit: contain;   /* maintain aspect ratio */
+  width: 44px;         
+  height: 44px;         
+  object-fit: contain;   
   color: black; 
   transition: transform 0.3s;
 }
 
 .skill-item:hover .skill-svg {
-  transform: scale(1.2); /* same hover effect as Font Awesome */
+  transform: scale(1.2);
   color: black;  
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    margin-top: 0px;
+  }
+
+  .skills-title {
+  font-size: 16px; 
+  }
+
+  .skills-icons {
+    gap: 0px; 
+  }
+
+  .skill-item svg {
+    font-size: 24px;
+  }
+
+  .skill-svg {
+    width: 24px;          
+    height: 24px;         
+  }
 }
