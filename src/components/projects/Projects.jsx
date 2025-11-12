@@ -1,22 +1,14 @@
 import './Projects.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faJs,
-  faReact,
-  faNodeJs,
-  faAngular,
-  faPython,
-  faGit,
-  faAws
-} from '@fortawesome/free-brands-svg-icons';
+import { faAngular, faPython, faAws } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import typescriptLogo from '../../assets/logos/typescript.svg';
 import lambdaLogo from '../../assets/logos/aws-lambda.svg';
 import d3Logo from '../../assets/logos/d3-js.svg';
 import djangoLogo from '../../assets/logos/django.svg';
-import mapDashboardImg from '../../assets/projects/dashboard_ss1.png'; // example image
-import civetImg from '../../assets/projects/civet_ss1.png'; // add more images as needed
-import seahorseImg from '../../assets/projects/seahorse_ss.png'; // add more images as needed
+import mapDashboardImg from '../../assets/projects/dashboard_ss1-min.png'; // example image
+import civetImg from '../../assets/projects/civet_ss1-min.png'; // add more images as needed
+import seahorseImg from '../../assets/projects/seahorse_ss-min.png'; // add more images as needed
 
 const projects = [
   {
