@@ -12,7 +12,7 @@ import seahorseImg from '../../assets/projects/seahorse_ss-min.png'; // add more
 
 const projects = [
   {
-    title: 'Map Dashboard - Geographic Data Visualization',
+    title: 'Geospatial Insights Dashboard',
     description:
       'A full-stack interactive dashboard displaying geographic data using Leaflet and D3.js. Built with a responsive interface to explore spatial datasets dynamically.',
     image: mapDashboardImg,

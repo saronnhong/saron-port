@@ -1,24 +1,78 @@
 import './About.css';
+import { useMemo } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-const About = () => (
-    <main>
-        <section className="about-section">
-            {/* <div className="about-hello">Hello my name is</div>
-            <div className="about-name">Saron Nhong</div> */}
-            <div className="about-header">
-                <div className="about-hello">Hello my name is</div>
-                <div className="about-name">Saron Nhong</div>
+
+
+const About = () => {
+    const headers = [
+        "Who I am:",
+        "The person behind the work:",
+        "My story:",
+        "Meet the developer:",
+        "Behind the code:",
+        "A bit about me:",
+        "This is",
+        "Hi, I’m",
+        "About the developer:",
+        "Profile:",
+        "Introduction:",
+        "Get to know me:",
+        "A quick intro:",
+        "Hello",
+        "Nice to meet you, I’m",
+        "Let me introduce myself:",
+        "Bio:",
+        "Who’s behind the screen:",
+        "Developer profile:"
+    ];
+
+    const randomHeader = useMemo(() => {
+        return headers[Math.floor(Math.random() * headers.length)];
+    }, []);
+
+    return (
+        <main>
+            <section className="about-section">
+                <div className="about-header">
+                    <div className="about-hello">{randomHeader}</div>
+                    <div className="about-name">Saron Nhong</div>
+                </div>
+                {/* <div className="about-links">
+                    <a href="https://github.com/saronnhong" target="_blank" rel="noopener noreferrer">
+                        <span className="desktop-text">GitHub</span>
+                        <i className="fab fa-github mobile-icon"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/saronnhong" target="_blank" rel="noopener noreferrer">
+                        <span className="desktop-text">LinkedIn</span>
+                        <i className="fab fa-linkedin mobile-icon"></i>
+                    </a>
+                    <a href="https://www.instagram.com/chich20x6/" target="_blank" rel="noopener noreferrer">
+                        <span className="desktop-text">Instagram</span>
+                        <i className="fab fa-instagram mobile-icon"></i>
+                    </a>
+                </div> */}
+                <div className="about-links">
+                    <a href="https://github.com/saronnhong" target="_blank" rel="noopener noreferrer">
+                        <span className="desktop-text">GitHub</span>
+                         <FontAwesomeIcon class="mobile-icon" icon={faGithub} />
+                    </a>
+                    <a href="https://linkedin.com/in/saronnhong" target="_blank" rel="noopener noreferrer">
+                        <span className="desktop-text">LinkedIn</span>
+                        <FontAwesomeIcon class="mobile-icon" icon={faLinkedin} />
+                    </a>
+                    <a href="https://www.instagram.com/chich20x6/" target="_blank" rel="noopener noreferrer">
+                        <span className="desktop-text">Instagram</span>
+                        <FontAwesomeIcon class="mobile-icon" icon={faInstagram} />
+                    </a>
+                </div>
+            </section>
+            <div id="about" className="about-details">
+                I’m a Full Stack Software Engineer with 4 years of experience building cloud-based applications at Harvard University. I specialize in creating interactive data visualization platforms and scalable web solutions using Angular, React, Node.js, Python, Django, PostgreSQL (Aurora), MongoDB, and AWS cloud services. I’m passionate about turning complex datasets into intuitive, user-friendly interfaces that empower researchers and users alike.
             </div>
-            <div className="about-links">
-                <a href="https://github.com/saronnhong" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://linkedin.com/in/saronnhong" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://www.instagram.com/chich20x6/" target="_blank" rel="noopener noreferrer">Instagram</a>
-            </div>
-        </section>
-        <div id="about" className="about-details">
-            I’m a Full Stack Software Engineer with 4 years of experience building cloud-based applications at Harvard University. I specialize in creating interactive data visualization platforms and scalable web solutions using React, Angular, Node.js, and AWS. I’m passionate about turning complex datasets into intuitive, user-friendly interfaces that empower researchers and users alike.
-        </div>
-    </main>
-);
+        </main>
+    )
+};
 
 export default About;

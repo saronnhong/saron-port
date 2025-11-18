@@ -1,26 +1,35 @@
 .about-section {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical */
-  align-items: center;     /* horizontal */
+  justify-content: center;
+  align-items: center;
   height: 90vh;
   width: 500px;
   margin: 0 auto;
   text-align: center;
 }
-.about-hello{
-  font-size: 24px; 
+
+.about-hello {
+  font-size: 24px;
   font-weight: 200;
 }
 
 .about-name {
   font-size: 72px;
   font-weight: bold;
+  display: inline-block;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.about-name::after {
-  content: "";
+.about-name:hover {
+  transform: translateY(-3px);
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
 }
+
+/* .about-name::after {
+  content: "";
+} */
 
 .about-links {
   display: flex;
@@ -29,62 +38,71 @@
 
 .about-links a {
   color: inherit;
-  text-decoration: none; 
-  transition: color 0.3s; 
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .about-links a:hover {
-  color: #007bff; 
+  color: #007bff;
 }
 
 .about-details {
-  padding-left: 10%;   
+  padding-left: 10%;
   padding-right: 10%;
-  font-size: 24px;     
+  font-size: 24px;
   font-weight: 200;
 }
 
+.mobile-icon {
+  display: none;
+}
+
+.desktop-text {
+  display: inline;
+}
+
 @media (max-width: 768px) {
-  .about-hello,
+  .navbar{
+    display: none;
+  }
+  .about-hello {
+    font-size: 24px;
+  }
+
   .about-name {
-    display: inline;
-    font-weight: 200;
-  }
-
-  .about-hello{
-    font-size: 16px; 
-  }
-
-  .about-name{
-    font-size: 16px;
-  }
-
-  .about-name::after {
-    content: ".";
+    font-size: 36px;
   }
 
   .about-header {
-    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px; 
   }
 
   .about-section {
-    justify-content: start; 
-    align-items: start;    
-    height: 23px;
-    margin: 30px 5% 0px;
-    font-size: 16px; 
-  }
-
-  .about-links {
-    display: none !important;
+    height: 50vh;
+    width: 100vw;
+    font-size: 16px;
   }
 
   .about-details {
-    padding-left: 5%;   
+    padding-left: 5%;
     padding-right: 5%;
-    font-size: 16px;      
-  } 
+    font-size: 16px;
+  }
+
+  .desktop-text {
+    display: none;
+  }
+
+  .mobile-icon {
+    display: inline-block;
+    font-size: 36px;
+    color: inherit;
+    transition: transform 0.3s ease;
+  }
+
+  .about-links a:hover .mobile-icon {
+    transform: scale(1.2);
+  }
+
 }

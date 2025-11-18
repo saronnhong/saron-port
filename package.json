@@ -1,6 +1,6 @@
 {
-  "name": "saron-portfolio",
-  "homepage": "https://saronnhong.github.io/saron-port",
+  "name": "saron-port",
+  "homepage": "https://saronnhong.com",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -b gh-pages -f --cname saronnhong.com"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
