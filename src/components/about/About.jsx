@@ -3,8 +3,6 @@ import { useMemo } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-
-
 const About = () => {
     const headers = [
         "Who I am:",
@@ -39,32 +37,18 @@ const About = () => {
                     <div className="about-hello">{randomHeader}</div>
                     <div className="about-name">Saron Nhong</div>
                 </div>
-                {/* <div className="about-links">
-                    <a href="https://github.com/saronnhong" target="_blank" rel="noopener noreferrer">
-                        <span className="desktop-text">GitHub</span>
-                        <i className="fab fa-github mobile-icon"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/saronnhong" target="_blank" rel="noopener noreferrer">
-                        <span className="desktop-text">LinkedIn</span>
-                        <i className="fab fa-linkedin mobile-icon"></i>
-                    </a>
-                    <a href="https://www.instagram.com/chich20x6/" target="_blank" rel="noopener noreferrer">
-                        <span className="desktop-text">Instagram</span>
-                        <i className="fab fa-instagram mobile-icon"></i>
-                    </a>
-                </div> */}
                 <div className="about-links">
                     <a href="https://github.com/saronnhong" target="_blank" rel="noopener noreferrer">
                         <span className="desktop-text">GitHub</span>
-                         <FontAwesomeIcon class="mobile-icon" icon={faGithub} />
+                         <FontAwesomeIcon data-testid="github-icon" className="mobile-icon" icon={faGithub} />
                     </a>
                     <a href="https://linkedin.com/in/saronnhong" target="_blank" rel="noopener noreferrer">
                         <span className="desktop-text">LinkedIn</span>
-                        <FontAwesomeIcon class="mobile-icon" icon={faLinkedin} />
+                        <FontAwesomeIcon data-testid="linkedin-icon" className="mobile-icon" icon={faLinkedin} />
                     </a>
                     <a href="https://www.instagram.com/chich20x6/" target="_blank" rel="noopener noreferrer">
                         <span className="desktop-text">Instagram</span>
-                        <FontAwesomeIcon class="mobile-icon" icon={faInstagram} />
+                        <FontAwesomeIcon data-testid="instagram-icon" className="mobile-icon" icon={faInstagram} />
                     </a>
                 </div>
             </section>
