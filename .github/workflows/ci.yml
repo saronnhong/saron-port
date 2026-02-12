@@ -23,7 +23,7 @@ jobs:
         run: npm install
 
       - name: Run tests
-        run: npm test -- --watchAll=false
+        run: npx vitest run
 
       - name: Build project
         run: npm run build
