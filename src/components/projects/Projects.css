@@ -60,6 +60,27 @@
   transition: transform 0.3s, filter 0.3s;
 }
 
+.project-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.project-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .project-item {

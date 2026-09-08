@@ -9,8 +9,23 @@ import djangoLogo from '../../assets/logos/django.svg';
 import mapDashboardImg from '../../assets/projects/dashboard_ss1-min.png'; // example image
 import civetImg from '../../assets/projects/civet_ss1-min.png'; // add more images as needed
 import seahorseImg from '../../assets/projects/seahorse_ss-min.png'; // add more images as needed
+import salkImg from '../../assets/projects/salk_ss.png';
+import claudeLogo from '../../assets/logos/claude.svg';
+import openAILogo from '../../assets/logos/openai.svg';
+import postgresqlLogo from '../../assets/logos/postgresql.svg';
+import githubLogo from '../../assets/logos/github.svg';
+
 
 const projects = [
+  {
+    title: 'Salk Full-Stack Data Management Application',
+    description:
+      'A full-stack application built with Angular, Django, and PostgreSQL for managing structured biological data and historical assignments. Implemented database constraints, temporal relationships, PostgreSQL triggers and views, and a responsive interface for working with complex records.',
+    image: salkImg,
+    tech: [faAngular, typescriptLogo, faAws, faPython, djangoLogo, postgresqlLogo, faDatabase, githubLogo, openAILogo, claudeLogo],
+    liveUrl: 'https://colony.saronnhong.com',
+    githubUrl: 'https://github.com/saronnhong/salk-colony-manager'
+  },
   {
     title: 'Geospatial Insights Dashboard',
     description:
@@ -66,6 +81,32 @@ const Projects = () => (
               )
             )}
           </div>
+          {(project.liveUrl || project.githubUrl) && (
+            <div className="project-links">
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                >
+                  Live Demo
+                </a>
+              )}
+
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                >
+                  GitHub
+                </a>
+              )}
+            </div>
+          )}
+
         </div>
       </div>
     ))}
