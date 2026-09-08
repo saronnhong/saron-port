@@ -7,6 +7,10 @@ import MongoDBLogo from '../../assets/logos/mongodb.svg';
 import lambdaLogo from '../../assets/logos/aws-lambda.svg';
 import d3Logo from '../../assets/logos/d3-js.svg';
 import djangoLogo from '../../assets/logos/django.svg';
+import claudeLogo from '../../assets/logos/claude.svg';
+import openAILogo from '../../assets/logos/openai.svg';
+import postgresqlLogo from '../../assets/logos/postgresql.svg';
+import githubLogo from '../../assets/logos/github.svg';
 import './Skills.css';
 
 const skills = [
@@ -24,6 +28,10 @@ const skills = [
     { icon: lambdaLogo, name: 'AWS Lambda', type: 'svg' },
     { icon: d3Logo, name: 'D3 JS', type: 'svg' },
     { icon: djangoLogo, name: 'Django', type: 'svg' },
+    { icon: claudeLogo, name: 'Claude Code', type: 'svg' },
+    { icon: openAILogo, name: 'ChatGPT', type: 'svg' },
+    { icon: githubLogo, name: 'Github CoPilot', type: 'svg' },
+    { icon: postgresqlLogo, name: 'PostgresSQL', type: 'svg' },
 ];
 
 const Skills = () => (

@@ -40,7 +40,7 @@ const About = () => {
                 <div className="about-links">
                     <a href="https://github.com/saronnhong" target="_blank" rel="noopener noreferrer">
                         <span className="desktop-text">GitHub</span>
-                         <FontAwesomeIcon data-testid="github-icon" className="mobile-icon" icon={faGithub} />
+                        <FontAwesomeIcon data-testid="github-icon" className="mobile-icon" icon={faGithub} />
                     </a>
                     <a href="https://linkedin.com/in/saronnhong" target="_blank" rel="noopener noreferrer">
                         <span className="desktop-text">LinkedIn</span>
@@ -53,8 +53,10 @@ const About = () => {
                 </div>
             </section>
             <div id="about" className="about-details">
-                I’m a Full Stack Software Engineer with 4 years of experience building cloud-based applications at Harvard University. I specialize in creating interactive data visualization platforms and scalable web solutions using Angular, React, Node.js, Python, Django, PostgreSQL (Aurora), MongoDB, and AWS cloud services. I’m passionate about turning complex datasets into intuitive, user-friendly interfaces that empower researchers and users alike.
-            </div>
+                I’m a Full Stack Software Engineer with 4+ years of experience building web applications at Harvard University, where I helped turn complex scientific and research data into tools people could actually explore and understand. I enjoy working across the stack—from crafting interactive visualizations and responsive interfaces with Angular, React, and D3.js to building APIs, designing databases, and deploying applications on AWS.
+                <br></br>
+                <br></br>
+                I’m especially drawn to projects where there’s a challenging problem behind the interface. Whether I’m making large datasets easier to navigate, improving application performance, or figuring out the architecture for a new feature, I like building software that is thoughtful, practical, and genuinely useful.            </div>
         </main>
     )
 };
