@@ -6,7 +6,7 @@ import Contact from './contact/Contact';
 const Home = () => (
   <main>
     <About />
-    <Skills />
+    {/* <Skills /> */}
     <Projects />
     <Contact />
   </main>

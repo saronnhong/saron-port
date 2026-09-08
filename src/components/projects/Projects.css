@@ -1,127 +1,897 @@
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+
 .projects-section {
-  padding: 50px 20px;
-  max-width: 90%;
+  padding: 110px 7% 130px;
+
+  background: #f7f7f5;
+  color: #171717;
+}
+
+.projects-container {
+  max-width: 1300px;
+
   margin: 0 auto;
 }
 
-.projects-section h2 {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 40px;
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.projects-heading {
+  display: grid;
+
+  grid-template-columns: 1.3fr 0.7fr;
+
+  gap: 70px;
+
+  align-items: end;
+
+  padding-bottom: 55px;
+
+  margin-bottom: 15px;
+
+  border-bottom:
+    1px solid rgba(0, 0, 0, 0.12);
 }
 
-.project-item {
+.projects-label {
+  margin-bottom: 18px;
+
+  color: #8b8b8b;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+}
+
+.projects-heading h2 {
+  max-width: 800px;
+
+  margin: 0;
+
+  font-size:
+    clamp(2.8rem, 5vw, 5rem);
+
+  line-height: 1;
+
+  letter-spacing: -0.055em;
+}
+
+.projects-heading h2 span {
+  color: #777;
+}
+
+.projects-heading p {
+  max-width: 430px;
+
+  margin: 0;
+
+  color: #666;
+
+  font-size: 1rem;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   PROJECT LIST
+   ========================================================= */
+
+.projects-list {
   display: flex;
+
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   PROJECT CARD
+   ========================================================= */
+
+.project-card {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    36px
+    minmax(0, 1.35fr)
+    minmax(300px, 0.65fr);
+
+  gap: 38px;
+
   align-items: center;
-  margin-bottom: 50px;
-  gap: 30px;
+
+  padding: 65px 0;
+
+  border-bottom:
+    1px solid rgba(0, 0, 0, 0.12);
 }
 
-.project-item.reverse {
-  flex-direction: row-reverse; /* alternate layout for variety */
+.project-number {
+  align-self: start;
+
+  padding-top: 4px;
+
+  color: #9a9a9a;
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+
+  font-size: 0.75rem;
 }
 
-.project-image img {
-  width: 700px;        /* adjust size */
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
+
+/* =========================================================
+   SCREENSHOT
+   ========================================================= */
+
+.project-image-wrapper {
+  width: 100%;
+
+  min-width: 0;
 }
+
+.project-image-browser {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(0, 0, 0, 0.08);
+
+  border-radius: 16px;
+
+  background: #ececea;
+
+  box-shadow:
+    0 25px 60px
+      rgba(0, 0, 0, 0.09),
+    0 3px 10px
+      rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.project-card:hover
+.project-image-browser {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 35px 80px
+      rgba(0, 0, 0, 0.13),
+    0 4px 14px
+      rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================================
+   BROWSER BAR
+   ========================================================= */
+
+.browser-bar {
+  position: relative;
+
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 14px;
+
+  border-bottom:
+    1px solid rgba(0, 0, 0, 0.07);
+
+  background:
+    rgba(255, 255, 255, 0.78);
+}
+
+.browser-dots {
+  display: flex;
+
+  gap: 6px;
+}
+
+.browser-dots span {
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(0, 0, 0, 0.18);
+}
+
+.browser-address {
+  position: absolute;
+
+  left: 50%;
+
+  max-width: 55%;
+
+  overflow: hidden;
+
+  transform: translateX(-50%);
+
+  color: #888;
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+
+  font-size: 0.68rem;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CAROUSEL
+   ========================================================= */
+
+.carousel-image-container {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #ececea;
+}
+
+.carousel-image {
+  display: block;
+
+  width: 100%;
+  height: 360px;
+
+  object-fit: contain;
+
+  background: #ececea;
+
+  animation: carouselFade 0.3s ease;
+}
+
+@keyframes carouselFade {
+
+  from {
+    opacity: 0;
+
+    transform:
+      scale(0.995);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   CAROUSEL ARROWS
+   ========================================================= */
+
+.carousel-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  z-index: 4;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 40px;
+
+  height: 40px;
+
+  padding: 0;
+
+  border:
+    1px solid rgba(
+      255,
+      255,
+      255,
+      0.2
+    );
+
+  border-radius: 50%;
+
+  background:
+    rgba(12, 14, 20, 0.72);
+
+  backdrop-filter: blur(8px);
+
+  color: #fff;
+
+  font-size: 0.85rem;
+
+  cursor: pointer;
+
+  transform:
+    translateY(-50%);
+
+  opacity: 0;
+
+  transition:
+    opacity 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.project-image-browser:hover
+.carousel-arrow {
+  opacity: 1;
+}
+
+.carousel-arrow:hover {
+  background:
+    rgba(12, 14, 20, 0.92);
+}
+
+.carousel-arrow-left {
+  left: 14px;
+}
+
+.carousel-arrow-right {
+  right: 14px;
+}
+
+
+/* =========================================================
+   CAROUSEL COUNTER
+   ========================================================= */
+
+.carousel-counter {
+  position: absolute;
+
+  right: 14px;
+
+  bottom: 14px;
+
+  z-index: 3;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 6px 10px;
+
+  border:
+    1px solid rgba(
+      255,
+      255,
+      255,
+      0.16
+    );
+
+  border-radius: 999px;
+
+  background:
+    rgba(12, 14, 20, 0.72);
+
+  backdrop-filter: blur(8px);
+
+  color: #fff;
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.68rem;
+}
+
+.carousel-counter span {
+  opacity: 0.5;
+}
+
+
+/* =========================================================
+   CAROUSEL DOTS
+   ========================================================= */
+
+.carousel-dots {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  height: 32px;
+
+  background:
+    rgba(255, 255, 255, 0.72);
+
+  border-top:
+    1px solid rgba(0, 0, 0, 0.06);
+}
+
+.carousel-dot {
+  width: 6px;
+
+  height: 6px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background:
+    rgba(0, 0, 0, 0.22);
+
+  cursor: pointer;
+
+  transition:
+    width 0.25s ease,
+    background 0.25s ease;
+}
+
+.carousel-dot.active {
+  width: 20px;
+
+  background: #171717;
+}
+
+
+/* =========================================================
+   FEATURED BADGE
+   ========================================================= */
+
+.featured-badge {
+  position: absolute;
+
+  top: 16px;
+
+  right: 16px;
+
+  z-index: 3;
+
+  padding: 7px 11px;
+
+  border:
+    1px solid rgba(
+      255,
+      255,
+      255,
+      0.18
+    );
+
+  border-radius: 999px;
+
+  background:
+    rgba(12, 14, 20, 0.82);
+
+  backdrop-filter: blur(10px);
+
+  color: #fff;
+
+  font-size: 0.7rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.05em;
+}
+
+
+/* =========================================================
+   PROJECT INFORMATION
+   ========================================================= */
 
 .project-info {
-  flex: 1;
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  min-width: 0;
+}
+
+.project-subtitle {
+  margin-bottom: 12px;
+
+  color: #888;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
 }
 
 .project-info h3 {
-  font-size: 24px;
-  margin-bottom: 15px;
+  margin: 0;
+
+  font-size:
+    clamp(2rem, 3vw, 3.1rem);
+
+  line-height: 1.05;
+
+  letter-spacing: -0.045em;
 }
 
-.project-info p {
-  font-size: 18px;
-  line-height: 1.2;
-  font-weight: 200;
+.project-description {
+  margin: 22px 0 0;
+
+  color: #606060;
+
+  font-size: 1rem;
+
+  line-height: 1.7;
 }
+
+
+/* =========================================================
+   TECH STACK
+   ========================================================= */
 
 .project-tech {
-  margin-top: 15px;
   display: flex;
+
   flex-wrap: wrap;
-  gap: 12px;
-  align-items: center; /* vertically center all icons */
+
+  gap: 8px;
+
+  margin-top: 26px;
 }
 
-.tech-icon,
-.tech-icon-svg {
-  width: 36px;      /* match Font Awesome icon size */
-  height: 36px;
-  margin: 0 4px;
-  object-fit: contain; /* ensures SVG scales correctly */
-  transition: transform 0.3s, filter 0.3s;
+.tech-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 7px 10px;
+
+  border:
+    1px solid rgba(0, 0, 0, 0.1);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.5);
+
+  color: #555;
+
+  font-size: 0.72rem;
+
+  font-weight: 500;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
+
+.tech-badge:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(0, 0, 0, 0.2);
+
+  background: #fff;
+}
+
+.tech-badge-icon {
+  width: 14px;
+
+  height: 14px;
+}
+
+.tech-badge-image {
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   PROJECT LINKS
+   ========================================================= */
 
 .project-links {
   display: flex;
-  gap: 12px;
-  margin-top: 20px;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 30px;
 }
 
 .project-link {
-  display: inline-block;
-  padding: 8px 16px;
-  border: 1px solid currentColor;
-  border-radius: 5px;
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 11px 16px;
+
+  border-radius: 9px;
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
   text-decoration: none;
-  font-weight: 500;
-  transition: all 0.2s ease;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .project-link:hover {
-  transform: translateY(-2px);
-  opacity: 0.8;
+  transform:
+    translateY(-2px);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .project-item {
-    flex-direction: column;
+.project-link-primary {
+  border:
+    1px solid #171717;
+
+  background: #171717;
+
+  color: #fff;
+}
+
+.project-link-primary:hover {
+  background: #303030;
+}
+
+.project-link-secondary {
+  border:
+    1px solid
+    rgba(0, 0, 0, 0.14);
+
+  background:
+    rgba(255, 255, 255, 0.55);
+
+  color: #222;
+}
+
+.project-link-secondary:hover {
+  border-color:
+    rgba(0, 0, 0, 0.25);
+
+  background: #fff;
+}
+
+
+/* =========================================================
+   FEATURED PROJECT
+   ========================================================= */
+
+.project-featured {
+  margin-top: 32px;
+
+  padding: 42px 32px;
+
+  border:
+    1px solid rgba(0, 0, 0, 0.09);
+
+  border-radius: 24px;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(90, 120, 255, 0.08),
+      transparent 30%
+    ),
+    #efefed;
+}
+
+.project-featured
++ .project-card {
+  margin-top: 24px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .project-card {
+    grid-template-columns:
+      30px 1fr;
+
+    gap: 28px;
+
+    padding: 55px 0;
   }
 
-  .project-item.reverse {
-    flex-direction: column;
+  .project-image-wrapper {
+    grid-column: 2;
   }
 
-  .project-image img {
-    width: 100%;
-    max-width: 400px;
+  .project-info {
+    grid-column: 2;
   }
+
+  .project-featured {
+    padding: 32px 26px;
+  }
+
+  /* Always show arrows on touch-sized
+     layouts because there is no hover. */
+
+  .carousel-arrow {
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE / SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
   .projects-section {
-    padding: 0px;
-    max-width: 90%;
-    margin: 0 auto;
-    }
+    padding:
+      90px 22px 100px;
+  }
 
-  .projects-section h2 {
-    font-size: 20px;
-    font-weight: 400;
-    margin-bottom: 5px;
+  .projects-heading {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+
+    padding-bottom: 42px;
+  }
+
+  .projects-heading h2 {
+    font-size:
+      clamp(
+        2.8rem,
+        12vw,
+        4.5rem
+      );
+  }
+
+  .projects-heading p {
+    max-width: 100%;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    padding: 52px 0;
+  }
+
+  .project-number,
+  .project-image-wrapper,
+  .project-info {
+    grid-column: auto;
+  }
+
+  .project-featured {
+    margin-left: -8px;
+
+    margin-right: -8px;
+
+    padding: 24px 18px;
+
+    border-radius: 18px;
   }
 
   .project-info h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size:
+      clamp(
+        2rem,
+        8vw,
+        2.7rem
+      );
   }
 
-  .project-info p {
-    font-size: 16px;
-    }
+}
 
-    .tech-icon,
-    .tech-icon-svg {
-        width: 18px;      /* match Font Awesome icon size */
-        height: 18px;
-        margin: 0 4px;
-        object-fit: contain; /* ensures SVG scales correctly */
-        transition: transform 0.3s, filter 0.3s;
-    }
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+  .projects-section {
+    padding-left: 18px;
+
+    padding-right: 18px;
+  }
+
+  .project-info h3 {
+    font-size: 2.15rem;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+  }
+
+  .tech-badge {
+    font-size: 0.68rem;
+  }
+
+  .browser-address {
+    max-width: 48%;
+  }
+
+  .carousel-arrow {
+    width: 34px;
+
+    height: 34px;
+
+    font-size: 0.72rem;
+  }
+
+  .carousel-arrow-left {
+    left: 9px;
+  }
+
+  .carousel-arrow-right {
+    right: 9px;
+  }
+
+  .carousel-counter {
+    right: 10px;
+
+    bottom: 10px;
+  }
+
+  .featured-badge {
+    top: 10px;
+
+    right: 10px;
+
+    padding: 6px 9px;
+  }
+
+  .project-links {
+    width: 100%;
+  }
+
+  .project-link {
+    justify-content: center;
+  }
+
 }
