@@ -36,8 +36,8 @@ const About = () => {
                         </h1>
 
                         <p className="hero-description">
-                            I’m a full stack engineer with 4+ years of experience building
-                            interactive web applications at Harvard University. I specialize
+                            I’m a full-stack engineer with 4+ years of experience building
+                            interactive web applications at the Harvard T.H. Chan School of Public Health. I specialize
                             in turning complex scientific and research data into fast,
                             intuitive experiences using modern frontend technologies and
                             scalable backend systems.
