@@ -176,42 +176,42 @@ const projects = [
     ]
   },
 
-  {
-    title: 'CIVET',
+  // {
+  //   title: 'CIVET',
 
-    subtitle:
-      'COPD Interactive Exploration Tool',
+  //   subtitle:
+  //     'COPD Interactive Exploration Tool',
 
-    description:
-      'A data exploration platform for COPD research featuring violin plots, heatmaps, scatterplots, and bar charts. Built with Angular, D3.js, Django, and database-backed APIs, then deployed to AWS for secure research access.',
+  //   description:
+  //     'A data exploration platform for COPD research featuring violin plots, heatmaps, scatterplots, and bar charts. Built with Angular, D3.js, Django, and database-backed APIs, then deployed to AWS for secure research access.',
 
-    images: [
-      civetImg
-    ],
+  //   images: [
+  //     civetImg
+  //   ],
 
-    tech: [
-      {
-        name: 'Angular',
-        icon: faAngular
-      },
-      {
-        name: 'TypeScript',
-        image: typescriptLogo
-      },
-      {
-        name: 'D3.js',
-        image: d3Logo
-      },
-      {
-        name: 'Django',
-        image: djangoLogo
-      },
-      {
-        name: 'PostgreSQL',
-        image: postgresqlLogo
-      }
-    ]
-  }
+  //   tech: [
+  //     {
+  //       name: 'Angular',
+  //       icon: faAngular
+  //     },
+  //     {
+  //       name: 'TypeScript',
+  //       image: typescriptLogo
+  //     },
+  //     {
+  //       name: 'D3.js',
+  //       image: d3Logo
+  //     },
+  //     {
+  //       name: 'Django',
+  //       image: djangoLogo
+  //     },
+  //     {
+  //       name: 'PostgreSQL',
+  //       image: postgresqlLogo
+  //     }
+  //   ]
+  // }
 ];
 
 
