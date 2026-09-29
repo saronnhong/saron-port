@@ -519,7 +519,7 @@ const Projects = () => {
                   project.githubUrl) && (
 
                   <div className="project-links">
-
+{/* 
 
                     {project.liveUrl && (
 
@@ -543,7 +543,7 @@ const Projects = () => {
 
                       </a>
 
-                    )}
+                    )} */}
 
 
                     {project.githubUrl && (
